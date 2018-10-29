@@ -2,6 +2,7 @@ Team goal for chat bot:
 
 1. Make it interactive (To understand what the user says)
 	a) Answer basic questions (What, where, how, who)
+	b) Jokes
 2. Recommendations (movies, music, games ect.)
 3. Weather (DONE)
 4. Checking online/offline status

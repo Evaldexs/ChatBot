@@ -1,0 +1,24 @@
+import discord
+from discord.ext import commands
+import random
+
+
+class TylerCog:
+    def __init__(self, client):
+        self.client = client
+
+    @commands.command()
+    async def ChuckNorris(self, ctx, chucknorris: str):
+        # Using api.chucknorris.io/jokes API
+        url = 'https://api.chucknorris.io/jokes/random(chucknorris)
+        "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+        "id": "RF3_YjYlS_SufzREhV1NUQ",
+        "url": "https://api.chucknorris.io/jokes/RF3_YjYlS_SufzREhV1NUQ",
+        "value": "Chuck Norris loves all that shit Andrew Zimmern eats on bizzare foods"
+        res = requests.get(url)
+
+        data = res.json()
+
+
+def setup(client):
+    client.add_cog(TylerCog(client))

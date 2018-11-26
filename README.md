@@ -1,6 +1,5 @@
 # Chat-Bot
 A project for our chat bot
-
 Team goals and person responsible for work:
 
 1.Make chat bot interactive:

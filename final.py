@@ -90,4 +90,4 @@ async def on_message(message):
             await message.channel.send("I can do that!!! If you just use /help there you can see different commands for adding, substracting, divining, multiplying or powering numebrs by other number :yum: ")
     await client.process_commands(message)
 
-client.run('NTA4MjgwNzY3MzQ0ODAzODcw.Dr89hA.dNcDfbTcI7RsSrPvhTRqyhz9dgs')
+client.run('Token goes here')

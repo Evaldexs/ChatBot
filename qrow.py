@@ -9,7 +9,7 @@ class QrowCog:
 		self.client = client
 		
 	async def on_message(ctx,message):
-		# Possible questions that user can input with what
+		# Possible questions that user can input with How
 		x = ["Hi","Hey","Sup","Greetings","Hello", "hi", "hey", "sup", "greetings", "hello"]
 
 		a = ["How are you", "how are you", "How are you?","how are you?"]

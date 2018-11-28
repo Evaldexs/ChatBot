@@ -22,9 +22,6 @@ class QrowCog:
 
 		if message.content in a:
 			await message.channel.send ("Great,What about you?")
-		elif message.content in x:
-			random_xx = random.choice(xx)
-			await message.channel.send(str(random_xx) + " , " + str(message.author) + ". How are you today?")
 		elif message.content in b:
 			await message.channel.send ("That's a secret.") 
 		elif message.content in c:

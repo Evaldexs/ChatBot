@@ -2,17 +2,17 @@ import discord
 from discord.ext import commands
 import requests
 
-client = commands.Bot(command_prefix='/')
-
 #this part of the code is from the twitter api docs
 import twitter
 api = twitter.Api('tncvlizYNuoPCFrc2BbKNn3bS','TP3ZAqe2NRigShnHeH2vKctgwlay01D27DOqcB4ugeyTDtsSoi','1061914001523818496-EgqAXwVpo8gJMkLoWVYz3alSRkYnNS','W7D0UbAj4OlPdsAgjHnkDVTDnpNsuS2hVDsKewF6rPbDz')
+#here ends the part of the code from the twitter api docs
 
 #this part of the code is from the TMDb docs
 from tmdbv3api import TMDb
 tmdb = TMDb()
 tmdb.api_key = '544c63d3985b02396b68e1db1f86b637'
 from tmdbv3api import Movie
+#here ends the part of the code from TMDb docs
 
 class FinaruCog:
     def __init__(self, client):
@@ -53,6 +53,7 @@ class FinaruCog:
 
     
     async def movies(self, ctx):
+        #using TMDb API
         await ctx.send("Giving you the most popular movies")
         movie = Movie()
         popular = movie.popular()
@@ -71,8 +72,6 @@ class FinaruCog:
     async def on_message(ctx, message):
         if (message.author.bot == False):
             if message.content.startswith("/") == False:
-                if message.content.startswith("go"):
-                    await ctx.movies(message.channel)
                 mylist=message.content.split()
                 case=0
                 no=0
@@ -85,13 +84,10 @@ class FinaruCog:
                                 word+=character
                         return word
                     word=valid(words)
-                    m = ["movie","movies"]
-                    ms = ["music", "song"]
+                    m = ["movie","movies","film"]
                     d = ["don't","dont","no"]
                     if word.lower() in m:
                         case=1
-                    elif word.lower() in ms:
-                        case=2
                     elif word.lower() in d:
                         no=1
                     elif word.lower() == "similar":
@@ -106,8 +102,6 @@ class FinaruCog:
                             await ctx.movies(message.channel)
                         else:
                             await message.channel.send("If you want a similar match for a certain movie, use the '/movie name' command and I'll give you 5 similar matches for your movie")
-                    elif case == 2:
-                        await message.channel.send("Searching for songs \n")
 
 def setup(client):
     client.add_cog(FinaruCog(client))

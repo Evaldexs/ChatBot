@@ -4,7 +4,7 @@ import random
 from urllib.request import urlopen
 import json
 
-initial_extensions = ['evaldas', 'atanas', 'finaru', 'tyler']
+initial_extensions = ['evaldas', 'atanas', 'finaru', 'tyler','qrow']
 
 client = commands.Bot(command_prefix='/')
 
@@ -33,32 +33,32 @@ async def on_message(message):
         await client.process_commands(message)
 
 
-#                                                 DIFFERENT EVENTS GO HERE
+#                                                 DIFFERENT EVENTS GO HERE                            
 
 #                                                   COMMANDS START HERE
 
 @client.command()
-async def add(ctx, a: float, b: float):
-    sums = a + b
-    await ctx.send(f"Well let me think... I think the answer will be {sums}")
+async def add(ctx, a: int, b: int):
+    sum = a + b
+    await ctx.send(f"Well let me think... I think the answer will be {sum}")
 
 @client.command()
-async def substract(ctx, a: float, b: float):
+async def substract(ctx, a: int, b: int):
     sub = a - b
     await ctx.send(f"Well this is quite easy.. The answer will be {sub}")
 
 @client.command()
-async def divine(ctx, a: float, b: float):
+async def divine(ctx, a: int, b: int):
     div = a/b
     await ctx.send(f"Well... my robotic knowledge tells me that the answer is {div}")
 
 @client.command()
-async def multiply(ctx, a: float, b: float):
+async def multiply(ctx, a: int, b: int):
     mul = a * b
     await ctx.send(f"Multiplying things is always hard... but I guess the answer will be {mul}")
 
 @client.command()
-async def power(ctx, a: float, b: float):
+async def power(ctx, a: int, b: int):
     pow = a**b
     await ctx.send(f"Well your answer will be: {pow}")
 
@@ -68,26 +68,5 @@ async def power(ctx, a: float, b: float):
 async def logout(ctx):
         await client.logout()
 
-@client.event
-async def on_message(message):
 
-    if message.author != client.user:
-        message.content = message.content.lower()
-        author = message.author
-        if ("how are you" or "how are you doing" or "and you" or "and you?" or "you?" or "you") in message.content:
-            await message.channel.send("Well at the moment I'm feeling amazing!")
-        elif "why" in message.content:
-            await message.channel.send(f"Silly question :sweat_smile: . Because I can chat with you {author}!")
-        elif (("im" or "i'm" or "i am") and ("bad" or "upset" or "not well" or "frustrating")) in message.content:
-            await message.channel.send("Oh my... I'm so sorry that you are feeling like that... but I'm sure everything will get better soon. :pensive: . Maybe I can do something for you? For instance, I can search for a different movies with a /help command you will see how.")
-        elif ("good" or "amazing" or "well") in message.content:
-            await message.channel.send("I'm so glad to hear that!! :grin: ")
-        elif ("that's nice" or "thats nice" or "good" or "nice") in message.content:
-            await message.channel.send("It is indeed :joy: ")
-        elif ("give" and "weather") in message.content:
-            await message.channel.send("Well for this situation you can do /forecast city or country and I will give you the current weather. Yeah yeah... I'm that smart :yum: :yum: ")
-        elif ("substract" or "add" or "multiply" or "power" or "divine") in message.content:
-            await message.channel.send("I can do that!!! If you just use /help there you can see different commands for adding, substracting, divining, multiplying or powering numebrs by other number :yum: ")
-    await client.process_commands(message)
-
-client.run('Token goes here')
+client.run('NTA4MjgwNzY3MzQ0ODAzODcw.Dr89hA.dNcDfbTcI7RsSrPvhTRqyhz9dgs')

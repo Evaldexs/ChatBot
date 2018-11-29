@@ -2,6 +2,10 @@ import discord
 from discord.ext import commands
 import requests
 
+""" Twitter API docs : https://python-twitter.readthedocs.io/en/latest/index.html
+    TMDb docs : https://www.themoviedb.org/documentation/api """
+
+
 #this part of the code is from the twitter api docs
 import twitter
 api = twitter.Api('tncvlizYNuoPCFrc2BbKNn3bS','TP3ZAqe2NRigShnHeH2vKctgwlay01D27DOqcB4ugeyTDtsSoi','1061914001523818496-EgqAXwVpo8gJMkLoWVYz3alSRkYnNS','W7D0UbAj4OlPdsAgjHnkDVTDnpNsuS2hVDsKewF6rPbDz')

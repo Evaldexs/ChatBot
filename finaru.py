@@ -14,6 +14,9 @@ tmdb.api_key = '544c63d3985b02396b68e1db1f86b637'
 from tmdbv3api import Movie
 #here ends the part of the code from TMDb docs
 
+""" The next three lines ar from the internet. 
+Source : https://gist.github.com/EvieePy/d78c061a4798ae81be9825468fe146be """
+
 class FinaruCog:
     def __init__(self, client):
         self.client = client

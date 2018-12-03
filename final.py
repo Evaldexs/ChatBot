@@ -69,4 +69,4 @@ async def logout(ctx):
         await client.logout()
 
 
-client.run('NTA4MjgwNzY3MzQ0ODAzODcw.Dr89hA.dNcDfbTcI7RsSrPvhTRqyhz9dgs')
+client.run('Token goes here')

@@ -107,5 +107,7 @@ class EvaldasCog:
 		embed_weather.add_field(name = 'Wind speed (m/s)', value = '{}'.format(wind_speedUK), inline = True )
 		await ctx.send(embed=embed_weather)
 
+""" THIS CODE IS NOT OURS CODE IT'S FROM THE INTERNET """
+"""Source of the code: https://gist.github.com/EvieePy/d78c061a4798ae81be9825468fe146be """
 def setup(client):
 	client.add_cog(EvaldasCog(client))

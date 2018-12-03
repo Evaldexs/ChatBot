@@ -34,9 +34,6 @@ async def on_message(message):
         print ('{}: {}'.format(author, content))
         await client.process_commands(message)
 
-
-#                                                 DIFFERENT EVENTS GO HERE                            
-
 #                                                   COMMANDS START HERE
 
 @client.command()
@@ -63,6 +60,7 @@ async def multiply(ctx, a: int, b: int):
 async def power(ctx, a: int, b: int):
     pow = a**b
     await ctx.send(f"Well your answer will be: {pow}")
+    
     
 """This event is used for chatbot interration to answer simple questions"""
 @client.event
